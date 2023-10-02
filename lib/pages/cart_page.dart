@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:coffee_shop/components/coffee_tile.dart';
 import 'package:coffee_shop/models/coffee.dart';
 import 'package:coffee_shop/models/coffee_shop.dart';
@@ -38,12 +36,12 @@ payment details here
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                 ),
-                child: Text(
+                child: const Text(
                   "Your Cart",
                   style: TextStyle(fontSize: 20),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               ),
               Expanded(
@@ -57,19 +55,19 @@ payment details here
                     return CoffeeTile(
                         coffee: eachCoffee,
                         onPressed: () => removeFromCart(eachCoffee),
-                        icon: Icon(Icons.delete));
+                        icon: const Icon(Icons.delete));
                   },
                 ),
               ),
               GestureDetector(
                 onTap: payNow,
                 child: Container(
-                  padding: EdgeInsets.all(25),
+                  padding: const EdgeInsets.all(25),
                   width: double.infinity,
                   decoration: BoxDecoration(
                       color: Colors.brown,
                       borderRadius: BorderRadius.circular(12)),
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       'Pay Now',
                       style: TextStyle(color: Colors.white, fontSize: 16),
